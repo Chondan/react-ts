@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '@redux/store';
 import { increment, decrement, fetchValue, fetchText, double } from '@redux/slices/exampleSlice';
