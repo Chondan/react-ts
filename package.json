@@ -25,7 +25,8 @@
         "prettier:check": "npx prettier --check ./",
         "prettier:fix": "npx prettier --write ./",
         "eslint:check": "npx eslint .",
-        "eslint:fix": "npx eslint --fix ."
+        "eslint:fix": "npx eslint --fix .",
+        "prepare": "husky"
     },
     "eslintConfig": {
         "extends": [
@@ -52,6 +53,7 @@
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-prettier": "^5.5.4",
         "eslint-plugin-react": "^7.37.5",
+        "husky": "^9.1.7",
         "prettier": "^3.6.2"
     }
 }
