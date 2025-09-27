@@ -6,6 +6,7 @@ import { RootState, AppDispatch } from './redux/store';
 import { increment, decrement, fetchValue, fetchText, double } from './redux/slices/exampleSlice';
 import clsx from 'clsx';
 import { config } from '@config/index';
+import { QueryExample } from './components/QueryExample';
 
 function App() {
     const value = useSelector((state: RootState) => state.example.value);
@@ -43,6 +44,9 @@ function App() {
                     <button onClick={() => dispatch(fetchText({ text: 'Hi' }))} disabled={textLoading}>
                         {textLoading ? 'Loading...' : 'Fetch Text'}
                     </button>
+                </div>
+                <div style={{ marginTop: 20 }}>
+                    <QueryExample />
                 </div>
             </header>
         </div>
