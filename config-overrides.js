@@ -4,10 +4,10 @@ const { alias } = require('react-app-rewire-alias');
 // eslint-disable-next-line no-undef
 module.exports = function override(config) {
     alias({
-        '@src': 'src/',
         '@components': 'src/components',
-        '@pages': 'src/pages',
+        '@config': 'src/config',
         '@redux': 'src/redux',
+        '@src': 'src/',
     })(config);
     return config;
 };

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from './redux/store';
 import { increment, decrement, fetchValue, fetchText, double } from './redux/slices/exampleSlice';
 import clsx from 'clsx';
+import { config } from '@config/index';
 
 function App() {
     const value = useSelector((state: RootState) => state.example.value);
@@ -20,6 +21,7 @@ function App() {
                 <p>
                     Edit <code>src/App.tsx</code> and save to reload.
                 </p>
+                <span>{config.greeting}</span>
                 <a className={clsx('App-link', 'link')} href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
                     Learn React
                 </a>
