@@ -6,14 +6,14 @@ import AppRouter from '@src/routes/AppRouter';
 import { Provider } from 'react-redux';
 import { store } from '@src/redux/store';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { AppContext, appContext } from '@src/context/app';
+import { AppContext, appContextValue } from '@src/context/app';
 
 const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
     <React.StrictMode>
-        <AppContext.Provider value={appContext}>
+        <AppContext.Provider value={appContextValue}>
             <QueryClientProvider client={queryClient}>
                 <Provider store={store}>
                     <AppRouter />

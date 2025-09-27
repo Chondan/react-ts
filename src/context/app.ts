@@ -10,9 +10,9 @@ type AppContextType = {
     todoService: TodoService;
 };
 
-export const appContext = {
+export const appContextValue = {
     axiosInstance: axiosInstance,
     todoService: new TodoService(axiosInstance),
 };
 
-export const AppContext = createContext<AppContextType>(appContext);
+export const AppContext = createContext<AppContextType>(appContextValue);
