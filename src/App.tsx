@@ -6,6 +6,7 @@ import { RootState, AppDispatch } from './redux/store';
 import { increment, decrement, fetchValue, fetchText, double } from './redux/slices/exampleSlice';
 import clsx from 'clsx';
 import { config } from '@config/index';
+import { useGetTodoQuery } from '@redux/services/todoApi';
 
 function App() {
     const value = useSelector((state: RootState) => state.example.value);
@@ -13,6 +14,7 @@ function App() {
     const text = useSelector((state: RootState) => state.example.text);
     const textLoading = useSelector((state: RootState) => state.example.textLoading);
     const dispatch = useDispatch<AppDispatch>();
+    const { data: todo, isLoading: isTodoLoading } = useGetTodoQuery(1);
 
     return (
         <div className='App'>
@@ -44,6 +46,7 @@ function App() {
                         {textLoading ? 'Loading...' : 'Fetch Text'}
                     </button>
                 </div>
+                {isTodoLoading ? <div>Loading todo...</div> : <div>{todo?.title}</div>}
             </header>
         </div>
     );
