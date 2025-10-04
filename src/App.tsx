@@ -3,10 +3,10 @@ import logo from './logo.svg';
 import './App.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from './redux/store';
-import { increment, decrement, fetchValue, fetchText, double } from './redux/slices/exampleSlice';
+import { increment, decrement, fetchValue, fetchText, double } from './redux/_example/example.slice';
 import clsx from 'clsx';
 import { config } from '@config/index';
-import { useGetTodoQuery } from '@redux/services/todoApi';
+import { useGetTodoQuery } from '@redux/_example/example.api';
 
 function App() {
     const value = useSelector((state: RootState) => state.example.value);

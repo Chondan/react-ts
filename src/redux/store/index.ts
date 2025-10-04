@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import exampleReducer from '@redux/slices/exampleSlice';
-import { todoApi } from '@redux/services/todoApi';
+import exampleReducer from '@redux/_example/example.slice';
+import { exampleApi } from '@redux/_example/example.api';
 
 export const store = configureStore({
     reducer: {
         example: exampleReducer,
-        [todoApi.reducerPath]: todoApi.reducer,
+        [exampleApi.reducerPath]: exampleApi.reducer,
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(todoApi.middleware),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(exampleApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
