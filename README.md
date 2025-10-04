@@ -119,8 +119,9 @@ npm run storybook
 
 For more details, see the documentation for each tool:
 - [React](https://reactjs.org/)
-- [Redux Toolkit](https://redux-toolkit.js.org/)
 - [React Router](https://reactrouter.com/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [React Query](https://tanstack.com/)
 - [Storybook](https://storybook.js.org/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
